@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home - PDF Converter</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<div>
+		<h1>Welcome to PDF Converter</h1>
+		<form action="/upload" method="post" enctype="multipart/form-data">
+			<input type="file" name="file" accept=".docx, .pdf" required>
+			<button type="submit" name="button" autofocus>
+				Upload File
+			</button>
+		</form>
+		<p>{{msg}}</p>
+	</div>
+</body>
+</html>
